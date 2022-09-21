@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import joblib
-from house_prices.preprocess import standardize_data, clean_data
+from dsp-rahul-jaikishen.house_prices.preprocess import standardize_data, clean_data
 
 
 MODEL_PATH = '../models/model.joblib'
@@ -11,6 +11,7 @@ FEATURES = FEATURES_CATEGORICAL + FEATURES_CONTINUOUS
 
 
 def make_predictions(input_data: pd.DataFrame) -> np.ndarray:
+    print(input_data)
     linear_model_loaded = joblib.load(MODEL_PATH)
     input_data = clean_data(input_data, FEATURES)
     # Identifying feature variables

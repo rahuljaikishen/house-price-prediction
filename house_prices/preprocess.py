@@ -4,8 +4,8 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
 
 
-ENCODER_PATH = '../models/encoder.joblib'
-SCALER_PATH = '../models/scaler.joblib'
+ENCODER_PATH = 'house_prices/models/encoder.joblib'
+SCALER_PATH = 'house_prices/models/scaler.joblib'
 
 
 def clean_data(data: pd.DataFrame, col_names: list) -> pd.DataFrame:
